@@ -1,0 +1,196 @@
+body {
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 5%;
+  font-family: sans-serif;
+  background-color: cornflowerblue;
+}
+
+.table {
+  font-size: 16px;
+  color: blueviolet;
+  text-align: center;
+  background: greenyellow;
+}
+
+form {
+  display: inline !important;
+}
+
+ 
+
+
+tr {
+  text-align: center;
+}
+
+tabHead {
+  text-align: center;
+  background: black;
+}
+
+.rowC {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  width: 100%;
+  justify-content: space-between;
+  background-color:blue;
+  border-radius: 5%;
+   
+}
+
+input {
+  text-align: center;
+}
+
+.welcome {
+  text-align: center;
+  border-top-left-radius: 90%;
+  
+  width: 100%;
+  
+}
+
+.fail {
+  text-align: center;
+  border-style: solid;
+  border-bottom-right-radius: 90%;
+  box-shadow: 10px 10px 10px green;
+  width: 100%;
+  margin: 0%;
+}
+
+.success {
+  font-size: 32px;
+  text-align: center;
+  border-style: dotted;
+  border-color: gold;
+  border-width: 10px;
+  border-bottom-left-radius: 90%;
+  border-top-right-radius: 10%;
+  border-bottom-right-radius: 10%;
+  box-shadow: 0px 0px 100px 50px yellow;
+  width: 100%;
+  
+}
+
+.welcometext {
+  text-align: right;
+  color:coral;
+  font-size: 10vw;
+  font-family: "Impact", Charcoal, sans-serif;
+   
+  margin: 0%;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+}
+
+.titletext {
+  text-align: left;
+  color:coral;
+  font-size: 5vw;
+  font-family: "Impact", Charcoal, sans-serif;
+   
+  margin: 0%;
+  position: absolute;
+  top: 5%;
+  right: 0%;
+}
+
+.successtext {
+  font-size: 10vw;
+  font-family: "Modak";
+  color: fuchsia;
+  margin: 0%;
+  text-align: center;
+  border-style: dotted;
+  border-color: gold;
+  border-width: 10px;
+  border-radius: 90%;
+  background-color: coral;
+  box-shadow: 0px 0px 100px 100px yellow;
+}
+
+.failtext {
+  color: red;
+  font-size: 10vw;
+  font-family: "Eater";
+  margin: 0%;
+  position: absolute;
+  top: 40%;
+  right: 0%;
+}
+
+.wrapper {
+  text-align: right;
+  background-color: cornflowerblue;
+}
+
+
+
+#pic {
+  display: inline-block;
+}
+
+#but {
+  font-size: 16px;
+  background: green;
+  color: greenyellow;
+  border-radius: 90%;
+}
+
+.statbut {
+  font-size: 16px;
+  color: greenyellow;
+  padding: 1%;
+  margin: 1%;
+  border-radius: 99%;
+}
+
+#butim {
+  height: 100px;
+  width: 100px;
+}
+
+#instruments {
+  
+}
+
+#ansDiv {
+  background: blueviolet;
+  text-align: center;
+  color: greenyellow;
+  padding: 5px;
+  margin: 2px;
+}
+
+.question {
+  font-size: 16px;
+  text-align: center;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 15%;
+  background-color: rgb(155, 106, 22);
+}
+
+.spacer {
+  width: 100%;
+}
+
+.clock {
+  float: left;
+}
+
+.custom-modal {
+  background: green;
+}
+
+#titlediv {
+  width: 100%;
+}
+
+.heado {
+  background-color: black
+}

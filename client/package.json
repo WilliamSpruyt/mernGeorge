@@ -1,0 +1,46 @@
+{
+  "name": "george-timed-tables",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.0.2",
+    "axios": "^0.19.0",
+    "bootstrap": "^4.3.1",
+    "cors": "^2.8.4",
+    "material-icons-react": "^1.0.4",
+    "morgan": "^1.9.1",
+    "popper.js": "^1.15.0",
+    "prop-types": "^15.6.1",
+    "react": "next",
+    "react-axios": "^2.0.0",
+    "react-bootstrap": "^0.32.1",
+    "react-bootstrap-table": "^4.3.1",
+    "react-countdown-clock": "^2.6.0",
+    "react-dom": "next",
+    "react-icons": "^2.2.7",
+    "react-media": "^1.8.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "^3.0.1",
+    "react-transition-group": "^4.1.0",
+    "reactstrap": "^6.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:3001",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
