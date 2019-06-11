@@ -16,7 +16,7 @@ var cors = require("cors");
 const API_PORT = process.env.PORT || 3001;
 // db config -- set your URI from mLab in secrets.js
 
-mongoose.connect("mongodb://AdminUser:fuckwit@ds217970.mlab.com:17970/stats");
+mongoose.connect("mongodb://AdminUser:fuckwit@ds217970.mlab.com:17970/stats",{ useNewUrlParser: true });
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 // now we should configure the API to use bodyParser and look for JSON data in the request body
