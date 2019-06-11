@@ -1,6 +1,18 @@
 import React from "react";
-
+import {Hangman} from "./hangman"
+ 
 export class CountdownClock extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      list: [],
+      progress: 0,
+      hangstring:"",
+    };
+    this.state={
+      
+    }
+  }
     secondsToHms(d) {
         d = Number(d);
         var h = Math.floor(d / 3600);
@@ -13,8 +25,8 @@ export class CountdownClock extends React.Component {
         return mDisplay +":"+ sDisplay; 
     }
     render() {
-
-        return (
+         console.log((this.props.limit/this.props.time)*13,this.props.limit,this.props.time)
+        return (<div>
           <svg id="score" width="100" height="100">
             <circle
               cx="50"
@@ -35,7 +47,10 @@ export class CountdownClock extends React.Component {
             >
               {this.secondsToHms(this.props.time)}
             </text>
+
           </svg>
+           
+           </div>
         );
       }
     }

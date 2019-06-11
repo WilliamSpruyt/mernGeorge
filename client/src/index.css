@@ -134,11 +134,11 @@ input {
   display: inline-block;
 }
 
-#but {
-  font-size: 16px;
-  background: green;
-  color: greenyellow;
-  border-radius: 90%;
+.infoIcon{
+  color:cornflowerblue;
+  background-color: coral;
+  padding:1px;
+
 }
 
 .statbut {

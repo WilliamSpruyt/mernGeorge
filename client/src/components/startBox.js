@@ -4,14 +4,15 @@ import { Header } from "./header";
 import {Modal, FormControl, Row, Grid, Col} from "react-bootstrap";
 import Button from '@material-ui/core/Button'; 
 import Tooltip from '@material-ui/core/Tooltip';
- 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import "../index.css"
 const HtmlTooltip = withStyles(theme => ({
   tooltip: {
      
-     
+    enterDelay:3000,
     maxWidth: 220,
     fontSize: theme.typography.pxToRem(40),
      
@@ -62,8 +63,7 @@ export class StartBox extends React.Component {
             <Grid fluid={true} style={{margin:'5%'}}>
               <Row>
                 <Col {...this.props} xs={6} md={4}>
-                <HtmlTooltip title="How long do you need in minutes?" placement='bottom'   >
-                 
+                
                   <FormControl
                  
                     id="timeForm"
@@ -76,9 +76,10 @@ export class StartBox extends React.Component {
                     step="1"
                     onChange={this.props.onChange}
                     
-                  />       
-                 
-              </HtmlTooltip>
+                  />      
+                  <HtmlTooltip title="How long do you need in minutes?"  >
+                  <span>  <FontAwesomeIcon icon={faQuestionCircle} className="infoIcon"/></span>
+               </HtmlTooltip> 
                  
                  
                 
@@ -87,7 +88,7 @@ export class StartBox extends React.Component {
                 </Col>
 
                 <Col {...this.props}xs={6} md={4}>
-                <HtmlTooltip title="How many questions do you want?" placement="top">
+                 
                   <FormControl
                     placeholder="Number of Questions"
                     name="numQs"
@@ -97,17 +98,23 @@ export class StartBox extends React.Component {
                     max="100"
                     step="5"
                     onChange={this.props.onChange}
-                  /> 
-                  </HtmlTooltip>
+                  />  
+                  
+                  <HtmlTooltip title="How many questions do you want?"  >
+                  <span>  <FontAwesomeIcon icon={faQuestionCircle} className="infoIcon" /></span>
+               </HtmlTooltip> 
                 </Col>
                 <Col {...this.props}xs={6} md={4}>
-                <HtmlTooltip title="Give us a name for this session">
+                 
                   <FormControl
                     placeholder="What's your name?"
                     name="playerName"
                     value={this.props.playername}
                     onChange={this.props.onChange}
-                  /></HtmlTooltip>
+                  /> 
+                  <HtmlTooltip title="Give us a name for this session">
+                  <span>  <FontAwesomeIcon icon={faQuestionCircle} className="infoIcon"/></span>
+               </HtmlTooltip> 
                 </Col>
               </Row>{" "}
               

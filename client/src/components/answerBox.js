@@ -2,6 +2,8 @@ import React from "react";
 import "../index.css"
 import { MdCheck } from "react-icons/lib/md";
 import { FormControl } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faThumbsUp, faThumbsDown } from "@fortawesome/free-solid-svg-icons";
 
 export class AnswerBox extends React.Component {
   constructor(props) {

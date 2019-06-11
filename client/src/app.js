@@ -266,6 +266,7 @@ class Game extends React.Component {
               time={
                 this.state.time * 60 - Math.ceil(this.state.progress / 1000)
               }
+              limit={this.state.time * 60}
             />
             <Board
               col={
