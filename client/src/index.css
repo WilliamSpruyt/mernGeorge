@@ -40,6 +40,12 @@ tabHead {
    
 }
 
+.hangman1{
+
+  height:25%;
+
+}
+
 input {
   text-align: center;
 }

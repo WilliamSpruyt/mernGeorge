@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import Button from '@material-ui/core/Button'; 
 export const Header = () => (
   <header>
     <nav>
       <Link to="/" className="statbut">
-        <Button color="primary">HOME</Button>
+        <Button color="default">HOME</Button>
       </Link>
 
       <Link to="/stats" className="statbut">
-        <Button color="primary">STATS</Button>
+        <Button color="default">STATS</Button>
       </Link>
     </nav>
   </header>

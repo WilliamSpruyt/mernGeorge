@@ -3,7 +3,7 @@ import welcome from "./assets/images/welcome.jpg";
 import success from "./assets/images/success.JPG";
 import fail from "./assets/images/fail.JPG";
 import { Switch, Route } from "react-router-dom";
-import ReactCountdownClock from "react-countdown-clock";
+import { Hangman } from "./components/hangman";
 import { Qlist } from "./components/qlist.js";
 import { StatList } from "./components/statList.js";
 import { StartBox } from "./components/startBox";
@@ -98,7 +98,6 @@ class Game extends React.Component {
   step(timestamp) {
     if (!this.state.start) this.setState({ start: timestamp });
     this.setState({ progress: timestamp - this.state.start });
-    
 
     if (
       this.state.started &&
@@ -106,7 +105,9 @@ class Game extends React.Component {
     ) {
       window.requestAnimationFrame(this.step);
     }
-    if(this.state.progress / 1000 >( -10+this.state.time * 60)){ mySound.play();}
+    if (this.state.progress / 1000 > -10 + this.state.time * 60) {
+      mySound.play();
+    }
     if (this.state.progress / 1000 > this.state.time * 60) {
       this.gameOver("FAILLLLL", fail, "fail", "failtext");
     }
@@ -242,6 +243,7 @@ class Game extends React.Component {
   }
   render() {
     if (!this.state.started) {
+      console.log(this.state.time, this.state.progress);
       return (
         <div>
           <StartBox
@@ -260,7 +262,6 @@ class Game extends React.Component {
     } else {
       return (
         <div>
-          {}
           <span className="rowC" id="instruments">
             <CountdownClock
               time={
@@ -268,6 +269,15 @@ class Game extends React.Component {
               }
               limit={this.state.time * 60}
             />
+
+            <div>
+              {" "}
+              <Hangman
+                height="100px"
+                deathNo={(this.state.progress / (this.state.time * 60000)) * 16}
+              />
+            </div>
+
             <Board
               col={
                 "rgb(" +

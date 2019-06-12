@@ -7,86 +7,66 @@ export class Hangman extends React.Component {
 
   render() {
     return (
-      <svg id="hangman" height="800" width="500">
+      <svg id="hangman" viewBox="0 0 500 700" height={this.props.height}>
         {this.props.deathNo > 1 && (
           <line
-            x1="20"
-            y1="775"
-            x2="475"
-            y2="775"
+          x1="20" y1="675" x2="475" y2="675"
             strokeLinecap="round"
             stroke="black"
-            strokeWidth="10"
+            strokeWidth="20"
           />
         )}
         {this.props.deathNo > 2 && (
           <line
-            x1="25"
-            y1="775"
-            x2="25"
-            y2="25"
+          x1="25" y1="675" x2="25" y2="25"
             stroke="black"
-            strokeWidth="10"
+            strokeWidth="20"
           />
         )}
         {this.props.deathNo > 3 && (
           <line
-            x1="20"
-            y1="25"
-            x2="475"
-            y2="25"
+          x1="20" y1="25" x2="475" y2="25"
             strokeLinecap="round"
             stroke="black"
-            strokeWidth="10"
+            strokeWidth="20"
           />
         )}
         {this.props.deathNo > 4 && (
           <line
-            x1="350"
-            y1="25"
-            x2="350"
-            y2="225"
+          x1="20" y1="175" x2="170" y2="20"
+            strokeLinecap="round"
             stroke="black"
-            strokeWidth="10"
+            strokeWidth="20"
           />
         )}
         {this.props.deathNo > 5 && (
+          <line
+          x1="300" y1="25" x2="300" y2="125"
+            stroke="black"
+            strokeWidth="20"
+          />
+        )}
+        {this.props.deathNo > 6 && (
           <circle
-            cx="350"
-            cy="275"
-            r="50"
+          cx="300"
+          cy="175"
+          r="50"
+          
             stroke="black"
             strokeWidth="10"
             fill="white"
           />
         )}
-        {this.props.deathNo > 6 && (
+        {this.props.deathNo > 7 && (
           <line
-            x1="350"
-            y1="325"
-            x2="350"
-            y2="500"
-            stroke="black"
-            strokeWidth="10"
-          />
-        )}
-        {this.props.deathNo >7 && (
-          <line
-            x1="350"
-            y1="350"
-            x2="250"
-            y2="400"
-            strokeLinecap="round"
+          x1="300" y1="225"   x2="300" y2="400"
             stroke="black"
             strokeWidth="10"
           />
         )}
         {this.props.deathNo > 8 && (
           <line
-            x1="350"
-            y1="350"
-            x2="450"
-            y2="400"
+          x1="300" y1="250" x2="200" y2="300"
             strokeLinecap="round"
             stroke="black"
             strokeWidth="10"
@@ -94,10 +74,7 @@ export class Hangman extends React.Component {
         )}
         {this.props.deathNo > 9 && (
           <line
-            x1="350"
-            y1="500"
-            x2="450"
-            y2="650"
+          x1="300" y1="250" x2="400" y2="300"
             strokeLinecap="round"
             stroke="black"
             strokeWidth="10"
@@ -105,38 +82,43 @@ export class Hangman extends React.Component {
         )}
         {this.props.deathNo > 10 && (
           <line
-            x1="350"
-            y1="500"
-            x2="250"
-            y2="650"
+          x1="300" y1="400" x2="400" y2="550" 
             strokeLinecap="round"
             stroke="black"
             strokeWidth="10"
           />
         )}
         {this.props.deathNo > 11 && (
-          <circle
-            cx="325"
-            cy="250"
-            r="10"
+          <line
+          x1="300" y1="400" x2="200" y2="550"
+            strokeLinecap="round"
             stroke="black"
             strokeWidth="10"
-            fill="white"
           />
         )}
         {this.props.deathNo > 12 && (
           <circle
-            cx="375"
-            cy="250"
-            r="10"
+          cx="275"
+          cy="150"
+          r="10"
             stroke="black"
             strokeWidth="10"
             fill="white"
           />
         )}
         {this.props.deathNo > 13 && (
+          <circle
+          cx="325"
+          cy="150"
+          r="10"
+            stroke="black"
+            strokeWidth="10"
+            fill="white"
+          />
+        )}
+        {this.props.deathNo > 14 && (
           <path
-            d="M 325 300 q 0 -50 50 0"
+            d="M 275 200 q 0 -50 50 0"
             strokeLinecap="round"
             stroke="black"
             strokeWidth="5"

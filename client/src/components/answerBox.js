@@ -31,7 +31,7 @@ export class AnswerBox extends React.Component {
         <form>
           <FormControl
             autoFocus={this.props.focMe}
-            type="text"
+            type="number"
             value={this.state.value}
             onChange={this.handleChange}
           />

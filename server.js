@@ -2,7 +2,7 @@
 const express = require("express");
 const path = require("path");
 require("dotenv").config();
-const getSecret = require("./secrets");
+
 const Stat = require("./models/stat");
 const bodyParser = require("body-parser");
 const logger = require("morgan");
@@ -16,7 +16,9 @@ var cors = require("cors");
 const API_PORT = process.env.PORT || 3001;
 // db config -- set your URI from mLab in secrets.js
 
-mongoose.connect("mongodb://AdminUser:fuckwit@ds217970.mlab.com:17970/stats",{ useNewUrlParser: true });
+mongoose.connect("mongodb://AdminUser:fuckwit@ds217970.mlab.com:17970/stats", {
+  useNewUrlParser: true
+});
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 // now we should configure the API to use bodyParser and look for JSON data in the request body

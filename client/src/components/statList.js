@@ -1,5 +1,5 @@
 import React from "react";
-import { Table } from "react-bootstrap";
+ 
 import { Header } from "./header"
 import {
   BootstrapTable,
@@ -65,8 +65,4 @@ export class StatList extends React.Component {
     );
   }
 }
-/* <td>{ele.playerName}</td>
-                      <td>{ele.date}</td>
-                      <td>{ele.score}</td>
-                      <td>{Math.round(ele.duration)}</td>
-                      <td>{(ele.duration / ele.score).toFixed(2)}</td>*/
+ 

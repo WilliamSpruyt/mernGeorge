@@ -1,5 +1,5 @@
 import React from "react";
-import {Hangman} from "./hangman"
+
  
 export class CountdownClock extends React.Component {
   constructor(props) {
@@ -25,7 +25,7 @@ export class CountdownClock extends React.Component {
         return mDisplay +":"+ sDisplay; 
     }
     render() {
-         console.log((this.props.limit/this.props.time)*13,this.props.limit,this.props.time)
+          
         return (<div>
           <svg id="score" width="100" height="100">
             <circle
@@ -49,7 +49,7 @@ export class CountdownClock extends React.Component {
             </text>
 
           </svg>
-           
+         
            </div>
         );
       }
