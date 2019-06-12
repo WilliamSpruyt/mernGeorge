@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import { App } from "./app";
-import { Header } from "./components/header";
+ 
 import { BrowserRouter } from "react-router-dom";
 
 /*
@@ -13,7 +13,7 @@ class George extends React.Component {
   render() {
     return (
       <div>
-       
+         
         <App />
       </div>
     );
