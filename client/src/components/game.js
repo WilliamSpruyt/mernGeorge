@@ -105,29 +105,11 @@ const mySound = new Audio(
         }
         this.setState({ score: this.state.score + 1 });
         var pos = this.state.score + 1;
-        if (pos < this.state.numQs) {
-          let qlist = this.state.qstate.slice(0);
-          let newlyfocussedQ = (
-            <Question
-              focMe="autofocus"
-              id={qlist[pos].props.id}
-              x={qlist[pos].props.x}
-              y={qlist[pos].props.y}
-              answer={qlist[pos].props.answer}
-              key={this.qlist.toString() + new Date()}
-              handleChange={qlist[pos].props.handleChange}
-            />
-          );
-          var newlist = this.state.qstate.slice(0, pos);
-          newlist.push(newlyfocussedQ);
-          this.setState({ qstate: newlist.concat(qlist.slice(pos + 1)) });
-        }
-        console.log(this.state.qlist)
-      }
-    }
+         
+    }}
     submitStat = () => {
       const { duration, numQs, score, playerName, avTime } = this.state;
-      console.log(duration, numQs, score, playerName, avTime);
+      
       var date = new Date(Date.now()).toLocaleString();
       fetch("/api/stats", {
         method: "POST",
@@ -194,7 +176,7 @@ const mySound = new Audio(
     }
     render() {
       if (!this.state.started) {
-        console.log(this.state.time, this.state.progress);
+        
         return (
           <div>
             <StartBox

@@ -5,18 +5,27 @@ export class Question extends React.Component {
 
   render() {
     return (
-       
+      <Animate
+      play={true} // Toggle when animation should start
+      start={{
+        transform: `translate(${0}px,${-200}px)`
+         
+        
+      }}
+      end={{ transform: "translate(0px,0px)",}}
+      >
         <span>
           <div className="question">
-            {this.props.x} {"\u00D7"} {this.props.y}{" "}
-          </div>
+            {this.props.x} {"\u00D7"} {this.props.y}{"="}
+         
           <AnswerBox
+             
             focMe={this.props.focMe}
             id={this.props.id}
             handleChange={this.props.handleChange}
             answer={this.props.x * this.props.y}
-          />
-        </span> 
+          /> </div>
+        </span> </Animate>
       
     );
   }

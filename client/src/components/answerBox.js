@@ -28,10 +28,13 @@ export class AnswerBox extends React.Component {
   render() {
     if (!this.state.ticked) {
       return (
-        <form>
+        <form  style={{  
+          alignItems: 'center'}}>
           <FormControl
-            autoFocus={this.props.focMe}
+          style={{fontSize: '5vw',height:'8vw',width:'15vw'}}
+            autoFocus={true}
             type="number"
+            appearance="none"
             value={this.state.value}
             onChange={this.handleChange}
           />
