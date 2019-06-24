@@ -1,6 +1,7 @@
 .ansBox{
   height:100%;
   font-size:20vh;
+  text-align:center;
 }
 
 body {
@@ -42,8 +43,9 @@ tabHead {
   box-shadow: 0px 3px 3px 3px black;
 }
 
-.hangman1 {
-  height: 25%;
+Sundail {
+   
+  
 }
 
 input {

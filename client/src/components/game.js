@@ -12,6 +12,7 @@ import { Question } from "./question";
 import { CountdownClock } from "./countdownClock";
 import "../index.css";
 import { MdThumbsUpDown } from "react-icons/lib/md";
+import Sundial from "./sundial";
 
 const mySound = new Audio(
     "https://www.dropbox.com/s/stlordr82sdeqif/julien_matthey_bell_church_ring_6_o_clock.mp3?raw=1"
@@ -205,9 +206,9 @@ const mySound = new Audio(
   
               <div>
                 {" "}
-                <Hangman
-                  height="100px"
-                  deathNo={(this.state.progress / (this.state.time * 60000)) * 16}
+                <Sundial height="100%"  time={
+                  this.state.time * 60 -(this.state.progress / 1000)
+                } limit={this.state.time * 60}
                 />
               </div>
   
