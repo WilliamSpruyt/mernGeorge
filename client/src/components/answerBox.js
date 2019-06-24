@@ -29,9 +29,9 @@ export class AnswerBox extends React.Component {
     if (!this.state.ticked) {
       return (
         <form  style={{  
-          alignItems: 'center'}}>
+          alignItems: 'center',verticalAlign: 'middle'}}>
           <FormControl
-          style={{fontSize: '5vw',height:'8vw',width:'15vw'}}
+          style={{fontSize: '5vw',height:'8vw',width:'15vw',verticalAlign: 'middle'}}
             autoFocus={true}
             type="number"
             appearance="none"
