@@ -196,10 +196,10 @@ const mySound = new Audio(
       } else {
         return (
           <div>
-            <span className="rowC" id="instruments">
+            <span  id="instruments">
               
   
-              <div>
+              <div className="rowC">
                 {" "}
                 <Sundial height="100%"  time={
                   this.state.time * 60 -(this.state.progress / 1000)
