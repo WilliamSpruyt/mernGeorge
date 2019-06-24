@@ -1,6 +1,18 @@
 import React from 'react';
+const secondsToHms=(d)=> {
+    d = Number(d);
+    var h = Math.floor(d / 3600);
+    var m = Math.floor(d % 3600 / 60);
+    var s = Math.floor(d % 3600 % 60);
 
+     
+    var mDisplay = m < 10 ? "0"+m  : m;
+    var sDisplay =  s < 10 ? "0"+s  : s;
+    return mDisplay +":"+ sDisplay; 
+}
 const Sundial=(props)=>{
+    
+    
     return(
         <svg id="sundial" viewBox="0 0 100 100" height="auto" width="auto">
        
@@ -14,7 +26,17 @@ const Sundial=(props)=>{
              
     
         </g>
-         
+        <text
+        fill="#000000"
+        fontSize="30"
+        textAnchor="middle"
+        alignmentBaseline="middle"
+        fontFamily="Verdana"
+        x="50"
+        y="50"
+      >
+        {secondsToHms(props.countTime)}
+      </text>
       </svg>
 
     )

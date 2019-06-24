@@ -197,22 +197,25 @@ const mySound = new Audio(
         return (
           <div>
             <span className="rowC" id="instruments">
-              <CountdownClock
-                time={
-                  this.state.time * 60 - Math.ceil(this.state.progress / 1000)
-                }
-                limit={this.state.time * 60}
-              />
+              
   
               <div>
                 {" "}
                 <Sundial height="100%"  time={
                   this.state.time * 60 -(this.state.progress / 1000)
                 } limit={this.state.time * 60}
+                countTime={
+                  this.state.time * 60 - Math.ceil(this.state.progress / 1000)
+                }
                 />
               </div>
   
-              <Board
+              
+            </span>
+            <div className="quiz">
+              <Qlist listy={this.state.qstate[this.state.score]} qnum={this.state.score} play={true} />
+            </div>
+            <Board
                 col={
                   "rgb(" +
                   (255 - (255 / this.state.numQs) * this.state.score) +
@@ -224,10 +227,6 @@ const mySound = new Audio(
                   this.state.score === this.state.numQs ? "yay" : this.state.score
                 }
               />
-            </span>
-            <div className="quiz">
-              <Qlist listy={this.state.qstate[this.state.score]} qnum={this.state.score} play={true} />
-            </div>
           </div>
         );
       }
