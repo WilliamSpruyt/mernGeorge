@@ -220,7 +220,20 @@ componentDidMount(){
     } else {
       return (
         <div  >
-           
+        <Board
+        col={
+          "rgb(" +
+          (255 - (255 / this.state.numQs) * this.state.score) +
+          "," +
+          (255 / this.state.numQs) * this.state.score +
+          ",0)"
+        }
+        score={
+          this.state.score === this.state.numQs
+            ? "yay"
+            : this.state.numQs - this.state.score
+        }
+      />
             
               <Sundial
                  
@@ -232,22 +245,9 @@ componentDidMount(){
               />
              
          
-          <div style={{ borderStyle: "solid" }}>
+          <div style={{ borderStyle: "solid",background:"silver" }}>
             <div className="quiz">
-              <Board
-                col={
-                  "rgb(" +
-                  (255 - (255 / this.state.numQs) * this.state.score) +
-                  "," +
-                  (255 / this.state.numQs) * this.state.score +
-                  ",0)"
-                }
-                score={
-                  this.state.score === this.state.numQs
-                    ? "yay"
-                    : this.state.numQs - this.state.score
-                }
-              />
+              
               <div>
                 {" "}
                 {this.state.qstate[this.state.score]  && <Question
