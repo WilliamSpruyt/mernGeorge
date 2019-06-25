@@ -1,5 +1,5 @@
 import React from "react";
-import { AnswerBox } from "./answerBox";
+
 import { Animate } from "react-simple-animate";
 export class Question extends React.Component {
 
@@ -18,13 +18,7 @@ export class Question extends React.Component {
           <div className="question">
             {this.props.x} {"\u00D7"} {this.props.y}{"="}
          
-          <AnswerBox
-             
-            focMe={this.props.focMe}
-            id={this.props.id}
-            handleChange={this.props.handleChange}
-            answer={this.props.x * this.props.y}
-          /> </div>
+          </div>
         </span> </Animate>
       
     );

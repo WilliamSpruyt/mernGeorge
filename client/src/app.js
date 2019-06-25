@@ -2,7 +2,7 @@ import React from "react";
  
 import { Switch, Route } from "react-router-dom";
 import {Game} from "./components/game";
- 
+
 import { StatList } from "./components/statList.js";
  
 import "whatwg-fetch";

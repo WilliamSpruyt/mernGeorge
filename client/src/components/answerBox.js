@@ -28,17 +28,7 @@ export class AnswerBox extends React.Component {
   render() {
     if (!this.state.ticked) {
       return (
-        <form  style={{  
-          alignItems: 'center',verticalAlign: 'middle'}}>
-          <FormControl
-          style={{fontSize: '5vw',height:'8vw',width:'15vw',verticalAlign: 'middle'}}
-            autoFocus={true}
-            type="number"
-            appearance="none"
-            value={this.state.value}
-            onChange={this.handleChange}
-          />
-        </form>
+       <div>nob chedz</div>
       );
     } else
       return (
