@@ -11,7 +11,10 @@ body {
   font-family: sans-serif;
   background-color:white;
 }
-
+.Sundial{
+  height:50%;
+  width:auto;
+}
 .table {
   font-size: 16px;
   color: blueviolet;

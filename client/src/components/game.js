@@ -11,7 +11,7 @@ import { Board } from "./board";
 import { Question } from "./question";
 import { Jumbotron } from "react-bootstrap";
 import "../index.css";
-import { MdThumbsUpDown } from "react-icons/lib/md";
+import Right from "./right";
 import Sundial from "./sundial";
 import Numberpad from "./numberPad";
 const mySound = new Audio(
@@ -38,7 +38,8 @@ export class Game extends React.Component {
       playerName: "",
       progress: null,
       start: null,
-      answerbox: ""
+      answerbox: "",
+      rightness:null
     };
 
     
@@ -49,6 +50,10 @@ export class Game extends React.Component {
   }
 componentDidMount(){
   document.addEventListener("keydown", this._handleKeyDown);
+}
+componentWillUnmount() {
+   
+   document.removeEventListener("keydown",  this._handleKeyDown, false);
 }
   step(timestamp) {
     if (!this.state.start) this.setState({ start: timestamp });
@@ -101,7 +106,8 @@ componentDidMount(){
             textStyle: txt,
             start: null,
             progress: null,
-            answerbox:""
+            answerbox:"",
+        
           },
           () => {
             this.setState({ started: false });
@@ -111,10 +117,10 @@ componentDidMount(){
     );
   }
   handleLetterPress(letter) {
-    if (letter === "C") {
+    if (letter === "C" || letter === "c") {
       this.setState({ answerbox: "" });
     }
-    if (letter === "<" && this.state.answerbox.length > 0) {
+    else if (letter === "<" && this.state.answerbox.length > 0) {
       this.setState({
         answerbox: this.state.answerbox.slice(
           0,
@@ -125,14 +131,14 @@ componentDidMount(){
       this.setState({ answerbox: this.state.answerbox + letter }, () => {
         if (
           this.state.answerbox === this.state.qstate[this.state.score].answer
-        ) {
+        ) {this.setState({rightness:this.state.qstate[this.state.score].answer}, )
           if (this.state.score === this.state.numQs - 1) {
             console.log(this.state.score,this.state.numQs,"success of sorts")
             this.gameOver("Success", success, "success", "successtext");
             return;
           }
           this.setState({ score: this.state.score + 1, answerbox: "" });
-          console.log(this.state.score,this.state.numQs,"Why happen?")
+           setTimeout(()=>{this.setState({rightness:null})},500)
         }
       });
     }
@@ -234,7 +240,7 @@ componentDidMount(){
             : this.state.numQs - this.state.score
         }
       />
-            
+            <div className="Sundial">
               <Sundial
                  
                 time={this.state.time * 60 - this.state.progress / 1000}
@@ -242,10 +248,11 @@ componentDidMount(){
                 countTime={
                   this.state.time * 60 - Math.ceil(this.state.progress / 1000)
                 }
-              />
+              /></div>
              
          
           <div style={{ borderStyle: "solid",background:"silver" }}>
+        
             <div className="quiz">
               
               <div>
@@ -260,10 +267,11 @@ componentDidMount(){
                   answerbox={this.state.answerbox}
                 />}
               </div>
+             
               <AnswerBox
                 value={this.state.answerbox}
                 handleLetterpress={this.handleLetterpress}
-              />{" "}
+              />{" "} {this.state.rightness && <Right anim={(this.state.rightness)?true:false} value={this.state.rightness}/>}
             </div>
             <div className="quiz">
               <Numberpad handleLetterPress={this.handleLetterPress} />{" "}

@@ -2,13 +2,14 @@ import React from 'react'
 
 
 const AnswerBox=(props)=>
-{
+{ if(props.value){
     return (
-        <div className="Answer">
+      <div className="Answer">
          
-          {props.value}
+          {" "+props.value+" "}
         </div>
-    )
+    )}
+    else return null;
 }
 
 export default AnswerBox;
