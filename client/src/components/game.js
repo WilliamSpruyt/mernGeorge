@@ -73,14 +73,14 @@ componentWillUnmount() {
     }
   }
   _handleKeyDown = (event) => {
-    console.log(event.keyCode)
+   
   if(this.state.started && (event.keyCode===8 || event.keyCode===46) )  this.handleLetterPress("<")
   if(this.state.started && (event.key==="0" ||  Number(event.key)) )  {
     this.handleLetterPress(event.key)
   }
 }
   gameOver(mess, messPic, styley, txt) {
-    console.log(mess,"success of sorts part2")
+    
     var adjustedScore = this.state.score;
     adjustedScore += mess === "Success" ? 1 : 0;
     this.setState(
@@ -95,7 +95,7 @@ componentWillUnmount() {
       },
       () => {
         this.submitStat();
-
+        
         this.setState(
           {
             message: mess,
@@ -133,12 +133,12 @@ componentWillUnmount() {
           this.state.answerbox === this.state.qstate[this.state.score].answer
         ) {this.setState({rightness:this.state.qstate[this.state.score].answer}, )
           if (this.state.score === this.state.numQs - 1) {
-            console.log(this.state.score,this.state.numQs,"success of sorts")
+             
             this.gameOver("Success", success, "success", "successtext");
             return;
           }
           this.setState({ score: this.state.score + 1, answerbox: "" });
-           setTimeout(()=>{this.setState({rightness:null})},500)
+           setTimeout(()=>{this.setState({rightness:null})},150)
         }
       });
     }
@@ -173,8 +173,8 @@ componentWillUnmount() {
     this.qlist.length = 0;
 
     for (var i = 0; i < this.state.numQs; i++) {
-      var x = Math.floor(Math.random() * 5) + 7;
-      var y = Math.floor(Math.random() * 12) + 2;
+      var x = Math.floor(Math.random() * 5) + 8;
+      var y = Math.floor(Math.random() * 11) + 2;
       var foc = i === 0 ? "autofocus" : "";
 
       this.qlist.push({

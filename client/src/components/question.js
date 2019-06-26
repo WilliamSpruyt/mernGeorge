@@ -8,7 +8,7 @@ export class Question extends React.Component {
       <Animate
       play={true} // Toggle when animation should start
       start={{
-        transform: `translate(${0}px,${-200}px)`
+        transform: `translate(${-300}px,${-300}px)`
          
         
       }}
