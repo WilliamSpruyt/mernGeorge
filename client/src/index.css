@@ -1,7 +1,6 @@
-.ansBox{
-  height:100%;
-  font-size:20vh;
-   
+.ansBox {
+  height: 100%;
+  font-size: 20vh;
 }
 
 body {
@@ -9,21 +8,17 @@ body {
   margin-right: 10%;
   padding: 5%;
   font-family: sans-serif;
-  background-color:white;
+  background-color: white;
 }
-.Sundial{
-  height:50%;
-  width:auto;
+.Sundial {
+  height: 50%;
+  width: auto;
 }
 .table {
   font-size: 16px;
   color: blueviolet;
   text-align: center;
   background: greenyellow;
-}
-
-form {
-  display: inline !important;
 }
 
 tr {
@@ -37,12 +32,11 @@ tabHead {
 
 .rowC {
   display: flex;
- 
+
   align-items: top;
   width: 100%;
   justify-content: center;
-  
-   
+
   box-shadow: 0px 3px 3px 3px black;
 }
 
@@ -56,10 +50,10 @@ tabHead {
 input {
   text-align: center;
 }
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .welcome {
@@ -152,43 +146,20 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 1px;
 }
 
-.statbut {
-  font-size: 16px;
-  color: greenyellow;
-  padding: 1%;
-  margin: 1%;
-  border-radius: 99%;
-}
-
-#butim {
-  height: 100px;
-  width: 100px;
-}
-
 .question {
   display: flex;
   font-size: 5vw;
-  
+
   box-shadow: 0px 3px 3px 3px black;
   background-color: red;
   color: white;
-   
-  align-items:'conter';
-  margin:'auto';
-   
-   
-  
-  
-   
-   
+
+  align-items: "conter";
+  margin: "auto";
 }
 
 .spacer {
   width: 100%;
-}
-
-.clock {
-  float: left;
 }
 
 .custom-modal {
@@ -213,13 +184,13 @@ input[type=number]::-webkit-outer-spin-button {
 .Answer {
   display: flex;
   font-size: 5vw;
-  
+
   box-shadow: 0px 3px 3px 3px black;
   background-color: green;
   color: white;
-   
-  align-items:'conter';
-  margin:'auto';
+
+  align-items: "conter";
+  margin: "auto";
 }
 
 @font-face {

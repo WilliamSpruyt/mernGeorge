@@ -1,17 +1,12 @@
 import React from "react";
 import "../index.css";
-export default class LetterButton extends React.Component {
-  constructor(props) {
-    super(props);
-     this.state={clicked:false}
+const LetterButton =(props)=> {
   
-  }
-   
-  render() {
+  
     return (
       <div 
         onClick={
-           ()=>{ this.props.handleLetterPress(this.props.letter)}}
+           ()=>{props.handleLetterPress(props.letter)}}
            
                  >
         <svg width="50" height="50" >
@@ -34,10 +29,13 @@ export default class LetterButton extends React.Component {
             y="25"
             
           >
-            {this.props.letter}
+            {props.letter}
           </text>
         </svg>
       </div>
     );
+
+  
   }
-}
+
+  export default LetterButton;

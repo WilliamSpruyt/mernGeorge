@@ -1,9 +1,9 @@
 import React from "react";
 
 import { Animate } from "react-simple-animate";
-export class Question extends React.Component {
+const Question =(props)=> {
 
-  render() {
+  
     return (
       <Animate
       play={true} // Toggle when animation should start
@@ -16,15 +16,16 @@ export class Question extends React.Component {
       >
         <span>
           <div className="question">
-            {this.props.x} {"\u00D7"} {this.props.y}{"="}
+            {props.x} {"\u00D7"} {props.y}{"="}
          
           </div>
         </span> </Animate>
       
     );
+    
   }
-}
 
+  export default Question;
 /*<Animate
 play={true} // Toggle when animation should start
 start={{

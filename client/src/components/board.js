@@ -1,11 +1,12 @@
 import React from "react";
-
-export class Board extends React.Component {
-  render() {
+const Board =(props)=> {
+  
     return (
       <div className="Answer">
-          {this.props.score+" "}to go!
+          {props.score+" "}to go!
           </div>
     );
-  }
+   
 }
+
+export default Board;
